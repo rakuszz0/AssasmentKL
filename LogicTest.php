@@ -17,7 +17,7 @@ function answer(array $data, int $n): array {
     $counts = array_count_values($data);
     return array_values(array_filter($data, fn($id) => $counts[$id] <= $n ));
 }
-print_r(answer([5,10,15,10,7],1))
+echo "[" . implode(", ", answer([5, 10, 15, 10, 7], 1)) . "]";
 
 
 // function answer($data, $n) {
